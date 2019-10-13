@@ -24,7 +24,14 @@ namespace TheShop.Api.Controllers
         [HttpGet("product/{id}")]
         public ActionResult<Product> Get(int id)
         {
-            return _repo.GetProduct(id);
+            var product = _repo.GetProduct(id);
+
+            if (product != null)
+            {
+                return product;
+            }
+
+            return NotFound();
         }
 
         [HttpPost("product")]
@@ -33,9 +40,10 @@ namespace TheShop.Api.Controllers
             _repo.AddProduct(product);
         }
 
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [HttpPut("product/{id}")]
+        public void Put(int id, [FromForm] Product product)
         {
+
         }
 
         [HttpDelete("{id}")]

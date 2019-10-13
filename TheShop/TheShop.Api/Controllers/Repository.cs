@@ -56,5 +56,15 @@ namespace TheShop.Api.Controllers
                 return null;
             }
         }
+
+        public void UpdateProduct(int id, Product newProduct)
+        {
+            var product = GetProduct(id);
+
+            if (product != null)
+            {
+                product.Name = newProduct.Name;
+            }
+        }
     }
 }
