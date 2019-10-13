@@ -6,6 +6,7 @@ namespace TheShop.Api.Controllers
     [Route("v{version:apiVersion}")]
     [ApiController]
     [ApiVersion("1.0")]
+    [NotFoundFilter]
     public class ProductController : ControllerBase
     {
         private Repository _repo;
@@ -24,14 +25,7 @@ namespace TheShop.Api.Controllers
         [HttpGet("product/{id}")]
         public ActionResult<Product> Get(int id)
         {
-            var product = _repo.GetProduct(id);
-
-            if (product != null)
-            {
-                return product;
-            }
-
-            return NotFound();
+            return _repo.GetProduct(id);
         }
 
         [HttpPost("product")]
@@ -43,7 +37,7 @@ namespace TheShop.Api.Controllers
         [HttpPut("product/{id}")]
         public void Put(int id, [FromForm] Product product)
         {
-
+            _repo.UpdateProduct(id, product);
         }
 
         [HttpDelete("{id}")]

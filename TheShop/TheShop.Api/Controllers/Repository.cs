@@ -46,15 +46,7 @@ namespace TheShop.Api.Controllers
         {
             var index = id - 1;
 
-            try
-            {
-                return _products[index];
-            }
-            catch (System.ArgumentOutOfRangeException)
-            {
-
-                return null;
-            }
+            return _products[index];
         }
 
         public void UpdateProduct(int id, Product newProduct)
