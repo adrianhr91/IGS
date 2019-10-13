@@ -33,12 +33,28 @@ namespace TheShop.Api.Controllers
 
         public void AddProduct(Product product)
         {
+            product.Id = _products.Count + 1;
             _products.Add(product);
         }
 
         public List<Product> GetProducts()
         {
             return _products;
+        }
+
+        public Product GetProduct(int id)
+        {
+            var index = id - 1;
+
+            try
+            {
+                return _products[index];
+            }
+            catch (System.ArgumentOutOfRangeException)
+            {
+
+                return null;
+            }
         }
     }
 }

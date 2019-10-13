@@ -21,10 +21,10 @@ namespace TheShop.Api.Controllers
             return _repo.GetProducts();
         }
 
-        [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        [HttpGet("product/{id}")]
+        public ActionResult<Product> Get(int id)
         {
-            return "value";
+            return _repo.GetProduct(id);
         }
 
         [HttpPost("product")]
