@@ -1,9 +1,8 @@
 ﻿using Newtonsoft.Json;
 using System;
 
-namespace TheShop.Api.Controllers
+namespace TheShop.Api.Product
 {
-
     public class PriceTypeConverter : JsonConverter
     {
         public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)

@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using TheShop.Api.Controllers;
+using TheShop.Api.Product;
 
 namespace TheShop.Api
 {

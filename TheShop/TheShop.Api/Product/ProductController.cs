@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
-namespace TheShop.Api.Controllers
+namespace TheShop.Api.Product
 {
     [Route("v{version:apiVersion}")]
     [ApiController]

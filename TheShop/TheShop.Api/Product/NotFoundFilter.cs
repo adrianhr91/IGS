@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc.Filters;
 using System.Net;
 
-namespace TheShop.Api.Controllers
+namespace TheShop.Api.Product
 {
     public class NotFoundFilter : ExceptionFilterAttribute
     {

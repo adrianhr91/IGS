@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace TheShop.Api.Controllers
+namespace TheShop.Api.Product
 {
     public class Product
     {
@@ -9,12 +9,5 @@ namespace TheShop.Api.Controllers
 
         [JsonConverter(typeof(PriceTypeConverter))]
         public decimal Price { get; set; }
-    }
-
-    public class ProductDto
-    {
-        public int? Id { get; set; }
-        public string Name { get; set; }
-        public string Price { get; set; }
     }
 }
