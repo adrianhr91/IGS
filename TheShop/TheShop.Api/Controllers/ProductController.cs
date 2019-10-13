@@ -15,12 +15,10 @@ namespace TheShop.Api.Controllers
             _repo = repo;
         }
 
-        // GET api/products
-        [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        [HttpGet("products")]
+        public ActionResult<IEnumerable<Product>> Get()
         {
-            return new string[] { "value1", "value2" }
-            ;
+            return _repo.GetProducts();
         }
 
         [HttpGet("{id}")]
