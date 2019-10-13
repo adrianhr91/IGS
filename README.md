@@ -26,11 +26,9 @@ Errors are handled by throwing an appropriate exception that then gets handled i
 
 The implementation can be seen in the `Repository` class.
 
-## .NET Core Version
-While .NET Core 3.0 recently went into a stable release, a lot of the surrounding libraries haven't. As this is still a transitional period, the lower version was chosen as surrounding libraries will be more relient. Migration to .NET Core 3.0 was attempted but became tricky due to requirements on using unstable versions of libraries.
-
 ## Areas to Improve
 - For a more complex, real-world solution, unit tests are essential for testing classes without having to run the entire API and mock many dependencies. The current solution is simple enough that the Postman tests provide sufficient coverage.
 - Related to the previous point, abstraction can be introduced to make it easier to mock dependencies in tests or substitute them with other implementations as the solution grows.
 - Docker can be used to containerise the API. Thus, providing an easy way of running & hosting it as it will be better encapsulated. Unfortunately, newest version of Docker for Windows doesn't run on Windows Home and I do not have access to another version of Windows. Older versions of Docker Toolbox can be used and this is something I have done in the past but is harder to install and more error prone.
 - A good production ready solution requires a variety of improvements put in place - logging, authentication, etc.
+- While .NET Core 3.0 recently went into a stable release, a lot of the surrounding libraries haven't. As this is still a transitional period, the lower version was chosen as surrounding libraries will be more relient. Migration to .NET Core 3.0 was attempted but became tricky due to requirements on using unstable versions of libraries.
