@@ -40,9 +40,10 @@ namespace TheShop.Api.Controllers
             _repo.UpdateProduct(id, product);
         }
 
-        [HttpDelete("{id}")]
+        [HttpDelete("product/{id}")]
         public void Delete(int id)
         {
+            _repo.DeleteProduct(id);
         }
     }
 }

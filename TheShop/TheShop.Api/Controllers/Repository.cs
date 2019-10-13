@@ -49,6 +49,13 @@ namespace TheShop.Api.Controllers
             return _products[index];
         }
 
+        internal void DeleteProduct(int id)
+        {
+            var product = GetProduct(id);
+
+            _products.Remove(product);
+        }
+
         public void UpdateProduct(int id, Product newProduct)
         {
             var product = GetProduct(id);
