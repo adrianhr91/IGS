@@ -21,10 +21,11 @@ For example, the `Price` property in the `Product` class is kept as decimal as i
 ## Database
 For the sake of simplicity, an in-memory database has been implemented. It is configured as a singleton so the same store is used throughout the lifetime of the application.
 
+The implementation can be seen in the `Repository` class.
+
+
 ## Error Handling
 Errors are handled by throwing an appropriate exception that then gets handled in an **Exception Filter**. This approach allows for a standardised, flexile & extendable way of dealing with errors and unexpected behaviour. The **Exception Filters** remove the need for duplicated code across multiple methods.
-
-The implementation can be seen in the `Repository` class.
 
 ## Areas to Improve
 - For a more complex, real-world solution, unit tests are essential for testing classes without having to run the entire API and mock many dependencies. The current solution is simple enough that the Postman tests provide sufficient coverage.
