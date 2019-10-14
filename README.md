@@ -1,5 +1,5 @@
 # Solution Overview
-The solution is a using .NET Core 2.2 and ASP.NET Core to produce a RESTFul API.
+The solution is using .NET Core 2.2 and ASP.NET Core to produce a RESTFul API.
 
 # How to Run
 1. Open `TheShop.sln` file in Visual Studio.
@@ -11,7 +11,7 @@ A "feature-oriented" folder structure has been used. In this case, there's only 
 
 In order to keep the solution appropriately-simple, classes are designed to have as close to a single responsibility as possible, without over-complicating them.
 
-The in-built DI setup is used to decouple classes from each other.
+The built-in DI setup is used to decouple classes from each other.
 
 ## Approach
 The tests were used as a sort of system to integrate with. They can't be changed so it is the API that needs to be adjusted to handle things accordingly.
