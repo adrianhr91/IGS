@@ -2,8 +2,14 @@
 The solution is using .NET Core 2.2 and ASP.NET Core to produce a RESTFul API.
 
 # How to Run
+## Using Visual Studio
 1. Open `TheShop.sln` file in Visual Studio.
 1. Start `TheShop.Api` project.
+## Using Command Line
+```
+ cd TheShop.Api/
+ dotnet run
+```
 
 # Details
 ## Structure
